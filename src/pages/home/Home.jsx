@@ -1,5 +1,13 @@
+import { useNavigate } from "react-router";
 
 function Home() {
+
+    const navigate = useNavigate();
+
+    function handleGetStarted() {
+        navigate("/questions");
+    }
+
     return(
         <body>
     <main>
@@ -32,7 +40,7 @@ function Home() {
                 <div class="info">
                     <h1>Welcome to EcoPanda</h1>
                     <p>Our mission is to make calculating and reducing carbon footprint accessible to everyone.</p>
-                    <button>Get Started</button>
+                    <button onClick={handleGetStarted}>Get Started</button>
                 </div>
             </div>
         </section>
