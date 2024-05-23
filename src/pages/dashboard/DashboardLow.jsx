@@ -5,9 +5,18 @@ import 'chart.js/auto';
 import './Dashboard.css';
 
 const suggestions = [
-    "Consider reducing your meat consumption.",
-    "Increase the use of public transport.",
+    "Invest in renewable energy solutions.",
+    "Adopt a more plant-based diet.",
+    "Implement advanced waste management systems.",
     "Improve home insulation.",
+    "Use energy-efficient appliances.",
+    "Reduce water usage.",
+    "Carpool or use public transportation.",
+    "Support local and sustainable food sources.",
+    "Recycle and compost waste.",
+    "Install smart thermostats.",
+    "Plant trees or support reforestation projects.",
+    "Minimize air travel."
 ];
 
 const co2Data = {
