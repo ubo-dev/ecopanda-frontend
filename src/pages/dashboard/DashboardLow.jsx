@@ -89,37 +89,39 @@ function DashboardLow() {
     return (
         <div className="dashboard-container">
             <h1>Low Score Dashboard</h1>
-            <p>Total Points: {totalPoints}</p>
-            <ul>
+            <p className="total-points">Total Points: {totalPoints}</p>
+            <ul className="answers-list">
                 {userAnswers.map((answer, index) => (
                     <li key={index}>{`Question ${index + 1}: ${answer.text}`}</li>
                 ))}
             </ul>
             <h2>Suggestions to Reduce Carbon Footprint</h2>
-            <ul>
+            <ul className="suggestions-list">
                 {suggestions.map((suggestion, index) => (
                     <li key={index}>{suggestion}</li>
                 ))}
             </ul>
-            <h2>CO2 Emissions by Sector</h2>
-            <div className="chart-container">
-                <Bar data={co2Data} />
-            </div>
-            <h2>Energy Sources</h2>
-            <div className="chart-container">
-                <Pie data={energyData} />
-            </div>
-            <h2>Carbon Footprint Over Time</h2>
-            <div className="chart-container">
-                <Line data={footprintData} />
-            </div>
-            <h2>Waste Generation</h2>
-            <div className="chart-container">
-                <Doughnut data={wasteData} />
-            </div>
-            <h2>Efficiency Metrics</h2>
-            <div className="chart-container">
-                <Radar data={efficiencyData} />
+            <div className="charts-grid">
+                <div className="chart-container">
+                    <h3>CO2 Emissions by Sector</h3>
+                    <Bar data={co2Data} />
+                </div>
+                <div className="chart-container">
+                    <h3>Energy Sources</h3>
+                    <Pie data={energyData} />
+                </div>
+                <div className="chart-container">
+                    <h3>Carbon Footprint Over Time</h3>
+                    <Line data={footprintData} />
+                </div>
+                <div className="chart-container">
+                    <h3>Waste Generation</h3>
+                    <Doughnut data={wasteData} />
+                </div>
+                <div className="chart-container">
+                    <h3>Efficiency Metrics</h3>
+                    <Radar data={efficiencyData} />
+                </div>
             </div>
         </div>
     );
