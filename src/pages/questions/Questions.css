@@ -1,10 +1,10 @@
 .questions-container {
-    padding: 20px;
+    padding: 30px;
     background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for the background image to show through */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    margin: 50px auto; /* Center the container */
+    margin: 10% auto; /* Center the container */
     backdrop-filter: blur(10px); /* Blurs the background image behind the container */
 }
 
@@ -35,10 +35,9 @@
 }
 
 body {
-    background-image: url('../../../public/img/background.webp'); /* Add your background image here */
+    background-image: url('../../../public/img/banner-1.png'); /* Add your background image here */
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    margin: 0;
     font-family: Arial, sans-serif;
 }
