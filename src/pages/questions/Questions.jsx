@@ -6,6 +6,7 @@ import { useNavigate } from "react-router";
 
 const questionsData = [
   {
+    category: "Food",
     name: "How often do you eat animal-based products?",
     answers: [
       { text: "Never (Vegan)", points: 10 },
@@ -22,6 +23,7 @@ const questionsData = [
     ],
   },
   {
+    category: "Food",
     name: "How much of the food that you eat is unprocessed, unpackaged or locally grown?",
     answers: [
       { text: "0 < 20%", points: 2 },
@@ -32,6 +34,7 @@ const questionsData = [
     ],
   },
   {
+    category: "Housing",
     name: "What material is your house constructed with?",
     answers: [
       { text: "Wood", points: 8 },
@@ -41,6 +44,7 @@ const questionsData = [
     ],
   },
   {
+    category: "Housing",
     name: "How many people live in your household?",
     answers: [
       { text: "1 (Just me)", points: 2 },
@@ -50,6 +54,7 @@ const questionsData = [
     ],
   },
   {
+    category: "Housing",
     name: "What is the size of your home?",
     answers: [
       { text: "Small (24m²-45m²)", points: 10 },
@@ -59,6 +64,7 @@ const questionsData = [
     ],
   },
   {
+    category: "Energy",
     name: "How energy efficient is your home?",
     answers: [
       {
@@ -81,6 +87,7 @@ const questionsData = [
     ],
   },
   {
+    category: "Energy",
     name: "What percentage of your home's electricity comes from renewable sources?",
     answers: [
       { text: "0 < 20%", points: 2 },
@@ -91,6 +98,7 @@ const questionsData = [
     ],
   },
   {
+    category: "Waste",
     name: "Compared to your neighbors, how much trash do you generate?",
     answers: [
       { text: "Much less", points: 10 },
@@ -101,6 +109,7 @@ const questionsData = [
     ],
   },
   {
+    category: "Transport",
     name: "How far do you travel by car or motorcycle each week? (as a driver or passenger)",
     answers: [
       { text: "0 - 100km", points: 10 },
@@ -108,28 +117,6 @@ const questionsData = [
       { text: "200 - 300km", points: 6 },
       { text: "300 - 400km", points: 4 },
       { text: "400km+", points: 2 },
-    ],
-  },
-  {
-    name: "How energy efficient is your home?",
-    answers: [
-      {
-        text: "Very inefficient (poor insulation, few LED lamps, heating/cooling systems used often)",
-        points: 2,
-      },
-      {
-        text: "Below average (inefficient lighting, standard appliances)",
-        points: 4,
-      },
-      { text: "Average (modern appliances, climate controls)", points: 6 },
-      {
-        text: "Above average (well insulated, efficient lighting and appliances, careful use)",
-        points: 8,
-      },
-      {
-        text: "Efficiency-centered design (passive heating/cooling, advanced temperature control and ventilation, low electricity use)",
-        points: 10,
-      },
     ],
   },
 ];
@@ -189,7 +176,7 @@ function Questions() {
 
   return (
     <div>
-        <Navbar></Navbar>
+      <Navbar />
       <div className="questions-container">
         <div className={fade ? "fade-out" : ""}>
           <Question
@@ -206,14 +193,9 @@ function Questions() {
             Previous Question
           </button>
           {currentQuestionIndex < questionsData.length - 1 ? (
-            <button
-              onClick={handleNextQuestion}
-              disabled={currentQuestionIndex >= questionsData.length - 1}
-            >
-              Next Question
-            </button>
+            <button onClick={handleNextQuestion}>Next Question</button>
           ) : (
-            <button onClick={handleSubmit}>Submit</button>
+            <button onClick={handleSubmit}>Submit Answers</button>
           )}
         </div>
       </div>

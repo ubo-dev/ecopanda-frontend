@@ -1,16 +1,16 @@
 .dashboard-container {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for the background image to show through */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 50px auto; /* Center the container */
-    backdrop-filter: blur(10px); /* Blurs the background image behind the container */
+    max-width: 800px;
+    margin: 50px auto;
+    backdrop-filter: blur(10px);
 }
 
 .dashboard-container h1 {
     font-size: 24px;
-    color: #2e7d32; /* Dark green color */
+    color: #2e7d32;
     margin-bottom: 20px;
 }
 
@@ -27,5 +27,9 @@
 
 .dashboard-container p {
     font-size: 20px;
-    color: #2e7d32; /* Dark green color */
+    color: #2e7d32;
+}
+
+.chart-container {
+    margin-top: 20px;
 }
