@@ -13,7 +13,7 @@ function Navbar() {
           <div>
             <img
               onClick={handleHome}
-              style={{ width: "140px", "cursor":"pointer" }}
+              style={{ width: "100px", "cursor":"pointer" }}
               src={require("./PNG.png")}
               alt="ecopanda"
             ></img>

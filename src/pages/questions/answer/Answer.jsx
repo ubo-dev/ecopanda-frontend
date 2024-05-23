@@ -1,13 +1,11 @@
 import React from 'react';
 import './Answer.css';
 
-function Answer({ answer, onClick, isSelected }) {
+
+function Answer({ answer, onSelect, isSelected }) {
     return (
-        <div 
-            className={`answer-item ${isSelected ? 'selected' : ''}`} 
-            onClick={onClick}
-        >
-            <h2>{answer}</h2>
+        <div className={`answer-item ${isSelected ? 'selected' : ''}`} onClick={onSelect}>
+            <h2>{answer.text}</h2>
         </div>
     );
 }
