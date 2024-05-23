@@ -10,6 +10,42 @@ function Home() {
           <Navbar></Navbar>
         </header>
         <Herobanner></Herobanner>
+        <section id="section-2">
+          <div class="banner">
+            <div class="slider">
+              <div class="slide">
+                <img src="./img/banner-1.png" />
+                <div class="left-info">
+                  <div class="penetrate-blur">
+                    <h2>About</h2>
+                  </div>
+                  <div class="hero-content">
+                    <div>
+                      01.
+                    </div>
+                    <p>As EcoPanda, we aim to help reduce our environmental impact for a sustainable future. Our goal is to build a better future for our planet by enabling individuals and businesses to understand and reduce their carbon footprint.</p>
+                    <p>In a time of increasing environmental challenges, the importance of carbon footprint is growing. It is therefore important for every individual and business to calculate and reduce their carbon footprint.</p>
+                  </div>
+                </div>
+                <div class="right-info">
+                  <h2>us</h2>
+                </div>
+              </div>
+            </div>
+            <div class="navigation">
+              <button class="prev-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                  <path d="M15 6L9 12L15 18" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button class="next-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 6L15 12L9 18" stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
         <section id="section-3">
           <div class="faqs">
             <div class="faqs-header">
