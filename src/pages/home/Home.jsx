@@ -14,6 +14,7 @@ function Home() {
         <header>
           <Navbar></Navbar>
         </header>
+        {/*Burda başlıyor*/}
         <section id="section-1">
           <div class="white-space"></div>
           <div class="circle-1"></div>
@@ -34,6 +35,9 @@ function Home() {
                 ></path>
               </svg>
             </div>
+            <div class="shape-mobile">
+            <svg width="830" height="621" viewBox="0 0 830 621" fill="none"><path d="M674.769 0H518.917H363.686H0V202.032V310.914V621H363.686V463.887C448.545 463.68 517.468 395.784 518.917 311.742C518.917 225.63 588.667 155.871 674.769 155.871C760.456 155.871 830 86.112 830 0H674.769Z" fill="white"></path></svg>
+            </div>
             <div class="info">
               <h1>Welcome to EcoPanda</h1>
               <p>
@@ -44,6 +48,7 @@ function Home() {
             </div>
           </div>
         </section>
+        {/*Umudi buraya kadar ayrıcaksın*/}
         <section id="section-3">
           <div class="faqs">
             <div class="faqs-header">

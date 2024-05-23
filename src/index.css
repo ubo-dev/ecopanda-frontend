@@ -10,7 +10,6 @@ h1, h2, h3, h6 {
 
 header {
   left: 0;
-  padding: 35px 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -38,16 +37,34 @@ nav > div > ul > li > a {
   text-decoration: none;
   font-weight: 600;
   transition: .3s linear;
+  position: relative;
+}
+
+nav > div > ul > li > a::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: #5dd597;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  opacity: 0;
+  transition: all .3s linear;
+  pointer-events: none;
 }
 
 nav > div > ul > li > a:hover {
   color: #314438;
 }
 
+nav > div > ul > li > a:hover::after {
+  opacity: 1;
+}
+
 nav > div > a {
-  background-color: #fff;
+  background-color: green;
   border-radius: 20px;
-  color: #1a1a1a;
+  color: #fff;
   display: inline-block;
   font-size: 16px;
   text-decoration: none;
@@ -58,15 +75,20 @@ nav > div > a {
 }
 
 nav > div > a:hover {
-  background-color: green;
+  background-color: #5dd597;
   border-radius: 20px;
-  color: white;
-  display: inline-block;
-  font-size: 16px;
-  text-decoration: none;
-  font-weight: 600;
-  line-height: 1.5;
-  padding: 7px 15px;
+}
+
+nav > div button {
+  background: none;
+  border: none;
+  padding: 0 10px;
+  display: none;
+}
+
+nav > div button svg {
+  width: 24px;
+  height: 24px;
 }
 
 
@@ -77,7 +99,8 @@ nav, .content {
 }
 
 #section-1 {
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 800px;
   position: relative;
   overflow: hidden;
   background: url(../public/img/background.webp);
@@ -99,6 +122,13 @@ nav, .content {
   position: absolute;
   top: 0;
   left: -250px;
+}
+
+.shape-mobile {
+  display: none;
+  left: -400px;
+  position: absolute;
+  top: 360px;
 }
 
 .info {
@@ -188,6 +218,7 @@ nav, .content {
   bottom: -195px;
 }
 
+/* Umudi burdan itibaren ayır media query'ler ile farklı js dosyasına taşı */
 #section-3 {
   padding: 6rem 0;
   background-color: #f8fafc;
@@ -265,4 +296,74 @@ nav, .content {
 .faqser.active > .faqs-content-header > svg {
   transform: rotate(180deg);
   stroke: #1A3C34;
+}
+
+@media screen and (max-width: 1300px) {
+  .white-space {
+    width: 400px;
+  }
+
+  nav, .content {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .white-space {
+    height: 360px;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .circle-1 {
+    display: none;
+  }
+
+  .circle-2, .circle-3 {
+    height: 158px;
+    right: -79px;
+    width: 158px;
+  }
+
+  .circle-2 {
+    bottom: 79px;
+  }
+
+  .circle-3 {
+    bottom: -79px;
+  }
+
+  .shape {
+    display: none;
+  }
+
+  .shape-mobile {
+    display: block;
+  }
+
+  .info {
+    padding-top: 140px;
+  }
+
+  .info > h1 {
+    font-size: 42px;
+    line-height: 1.18;
+  }
+  
+  .info > p {
+    line-height: 1.71;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav > div a {
+    display: none;
+  }
+
+  nav > div button {
+    display: flex;
+    cursor: pointer;
+  }
 }
