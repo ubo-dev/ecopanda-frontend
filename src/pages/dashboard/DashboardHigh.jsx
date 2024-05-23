@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import './Dashboard.css';
 
-function DashboardHigh() {
+function DashboardHigh() {      
     const location = useLocation();
     const { userAnswers, totalPoints } = location.state || { userAnswers: [], totalPoints: 0 };
 
