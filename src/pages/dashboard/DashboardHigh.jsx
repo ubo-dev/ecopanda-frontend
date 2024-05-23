@@ -98,7 +98,7 @@ function DashboardHigh() {
     <div>
       <Navbar />
       <div className="dashboard-container">
-        <h1>High Score Dashboard</h1>
+        <h1>High Carbon Footprint Score</h1>
         <p className="total-points">Total Points: {totalPoints}</p>
         <ul className="answers-list">
           {userAnswers.map((answer, index) => (
