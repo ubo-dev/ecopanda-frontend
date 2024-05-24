@@ -1,5 +1,87 @@
 .App {
   text-align: center;
+  width: 80%; /* Genişliği arttır */
+  margin: 0 auto; /* Ortala */
+  border-radius: 10px; /* Köşeleri yuvarla */
+}
+
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(151, 142, 142, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+input,
+select {
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: calc(100% - 22px);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #118619;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #034a07;
+}
+
+.results {
+  margin-top: 30px;
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #61dafb;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #282c34;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .App-logo {
@@ -11,6 +93,33 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+/* Modal styles */
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #cde7cc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-header {

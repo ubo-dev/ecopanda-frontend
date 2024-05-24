@@ -5,6 +5,7 @@ import Questions from "./pages/questions/Questions";
 import DashboardLow from "./pages/dashboard/DashboardLow";
 import DashboardMid from "./pages/dashboard/DashboardMid";
 import DashboardHigh from "./pages/dashboard/DashboardHigh";
+import Calculations from "./pages/calculations/Calculations";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/dashboard-low" element={<DashboardLow />} />
           <Route path="/dashboard-medium" element={<DashboardMid />} />
           <Route path="/dashboard-high" element={<DashboardHigh />} />
+          <Route path="/calculations" element={<Calculations />} />
         </Routes>
       </BrowserRouter>
     </>
