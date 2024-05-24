@@ -1,0 +1,24 @@
+/* Add your CSS styles here */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.slider .slide {
+    display: none;
+}
+
+.slider .slide:first-child {
+    display: block;
+}
+
+.navigation .prev-btn, .navigation .next-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.faqs .faqser.active .faqs-content-header {
+    background-color: #f0f0f0;
+}

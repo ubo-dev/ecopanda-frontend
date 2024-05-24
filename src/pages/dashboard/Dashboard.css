@@ -10,7 +10,9 @@
     margin: 100px auto;
     backdrop-filter: blur(10px);
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 .dashboard-container h1 {
     font-size: 32px;
     color: #2e7d32;

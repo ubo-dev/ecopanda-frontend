@@ -10,7 +10,7 @@ function Home() {
           <Navbar></Navbar>
         </header>
         <Herobanner></Herobanner>
-        <section id="section-2">
+        <section id="about-us">
           <div class="banner">
             <div class="slider">
               <div class="slide">
@@ -46,7 +46,7 @@ function Home() {
             </div>
           </div>
         </section>
-        <section id="section-3">
+        <section id="vision">
           <div class="faqs">
             <div class="faqs-header">
               <span>Have any questions?</span>
