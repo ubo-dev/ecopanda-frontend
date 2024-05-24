@@ -1,20 +1,42 @@
 import { useNavigate } from "react-router";
+import React, { useEffect, useState } from "react";
 import "../../index.css";
+import "./navbar.css"; // Import the navbar.css file
 
 function Navbar() {
   const navigate = useNavigate();
+  const [isScrolled, setIsScrolled] = useState(false);
+
   function handleHome() {
     navigate("/");
   }
+
+  function handleCalculate() {
+    navigate("/calculations");
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header>
+      <header className={isScrolled ? "scrolled" : ""}>
         <nav>
           <div>
             <img
               style={{ width: "100px", cursor: "pointer" }}
               src={require("./PNG.png")}
               alt="ecopanda"
+              onClick={handleHome}
             />
             <ul>
               <li>
@@ -25,6 +47,9 @@ function Navbar() {
               </li>
               <li>
                 <a href="#mission">MISSION</a>
+              </li>
+              <li>
+                <a onClick={handleCalculate}>CALCULATE</a>
               </li>
             </ul>
             <a href="#">CONTACT US</a>
